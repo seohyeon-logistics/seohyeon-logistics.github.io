@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>서현물류 박대현 대표</title>
+<meta name="description" content="서현물류 대표 박대현 · 010-2565-6669 · pdh6218@naver.com">
+
+<!-- 카카오톡·문자 링크 미리보기용 -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="서현물류 박대현 대표">
+<meta property="og:description" content="전화 걸기 · 연락처 저장">
+<meta property="og:image" content="https://zoo-1602.github.io/seohyeon-logistics/assets/og.jpg">
+<meta property="og:url" content="https://zoo-1602.github.io/seohyeon-logistics/">
+
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+
+<style>
+  html, body { margin: 0; }
+  /* 위·아래 여백 색을 이미지 가장자리 색과 맞춤 */
+  html { background: linear-gradient(#0e0e0e 50%, #060606 50%) fixed; }
+  body { min-height: 100dvh; display: flex; justify-content: center; }
+
+  /* 명함 이미지 한 장 + 그 위에 투명한 버튼 영역 */
+  .card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    align-self: center;
+  }
+  .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+  }
+
+  /* 버튼 위치: 원본 이미지(941×1672) 기준 비율 */
+  .hit {
+    position: absolute;
+    top: 59.8%;
+    height: 6.7%;
+    width: 40.2%;
+    border-radius: 6% / 22%;
+    -webkit-tap-highlight-color: transparent;
+    transition: background .12s ease, box-shadow .12s ease;
+  }
+  .hit.call { left: 8.2%; }
+  .hit.save { left: 52%; }
+
+  /* 눌렀을 때 살짝 빛나는 피드백 */
+  .hit:active,
+  .hit:focus-visible {
+    background: rgba(241, 194, 125, .16);
+    box-shadow: 0 0 24px rgba(241, 194, 125, .35);
+    outline: none;
+  }
+
+  /* 위치 확인용: 주소 끝에 #debug 를 붙이면 영역이 보입니다 */
+  .debug .hit { background: rgba(255, 0, 80, .35); }
+
+  /* 화면 읽기 프로그램용 텍스트 (보이지 않음) */
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<main class="card">
+  <img src="assets/card.webp" width="941" height="1672"
+       alt="서현물류 대표 박대현, 전화 010-2565-6669, 이메일 pdh6218@naver.com">
+
+  <a class="hit call" href="tel:01025656669"><span class="sr">전화 걸기</span></a>
+  <a class="hit save" href="contact.vcf"><span class="sr">연락처 저장</span></a>
+</main>
+
+<script>
+  if (location.hash === '#debug') document.body.classList.add('debug');
+</script>
+</body>
+</html>
